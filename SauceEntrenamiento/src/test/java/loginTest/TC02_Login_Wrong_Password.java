@@ -33,13 +33,13 @@ public class TC02_Login_Wrong_Password {
 	  
 	  
 	  @Test
-	  public void TC02() {
+	  public void TC02_Invalid_Password() {
 		  
 		  //Call the method Login from LopinPage class
 		  loginPage.login(GlobalVariables.STANDARD_USER, GlobalVariables.WRONG_PASSWORD);
 		  
 		  //Declare boolean variable to validate the error message, calling the method "validaWrongPassword" from the class LoginPage
-		  boolean errorWrongPassword = loginPage.validateWrongPassword();
+		  boolean errorWrongPassword = loginPage.validateErrorMessage();
 		  
 		  
 		  //Validate if the content of the web element contains the expected message with an "assert"
@@ -47,7 +47,7 @@ public class TC02_Login_Wrong_Password {
 		  
 
 		  //I used below code just to confirm the text inside the web element, displaying it on the console
-		  String validateError = WrapClass.getText(loginPage.wrongPassword);
+		  String validateError = WrapClass.getText(loginPage.wrongCredentials);
 		  System.out.println(validateError);
 		  
 	  }

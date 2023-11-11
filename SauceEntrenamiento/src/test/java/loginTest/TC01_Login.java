@@ -30,7 +30,7 @@ public class TC01_Login {
   
  
 	  @Test
-	  public void TC01() {
+	  public void TC01_Valid_Credentials() {
 		  
 		  loginPage.login(GlobalVariables.STANDARD_USER, GlobalVariables.STANDARD_PASSWORD);
 		  

@@ -18,7 +18,7 @@ public class LoginPage {
 	@FindBy(id = "user-name") private WebElement userNameTxt;  //Find an element using id, with the type=private as WebElement called "userNameTxt"
 	@FindBy(id = "password") private WebElement passwordTxt;
 	@FindBy(id = "login-button") private WebElement btnLogin;
-	@FindBy(xpath = "//*[@class=\"error-message-container error\"]") public WebElement wrongPassword;
+	@FindBy(xpath = "//*[@class=\"error-message-container error\"]") public WebElement wrongCredentials;
 	
 	
 	//Methods to login 
@@ -28,11 +28,12 @@ public class LoginPage {
 		WrapClass.click(btnLogin);
 	}
 	
-	//Method to validate error message using wrong password
-	public boolean validateWrongPassword(){
+	//Method to validate error message using wrong password or wrong user
+	public boolean validateErrorMessage(){
+		
 		//Declare a boolean variable called "wrongPasswordMessage" to verify the content contains the message
-		boolean wrongPasswordMessage = WrapClass.getText(wrongPassword).contains("Epic sadface: Username and password do not match any user in this service");	
-		return wrongPasswordMessage;
+		boolean errorMessage = WrapClass.getText(wrongCredentials).contains("Epic sadface: Username and password do not match any user in this service");	
+		return errorMessage;
 	}
 	
 
