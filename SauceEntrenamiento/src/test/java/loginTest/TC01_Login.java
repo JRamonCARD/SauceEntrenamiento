@@ -12,7 +12,7 @@ import org.testng.annotations.AfterTest;
 
 
 
-public class TC01__Login {
+public class TC01_Login {
 	
 		//Declare and Initialized an object type WebDriver called "driver" to assign the function inside the method "setDtiver"
 		WebDriver driver = DriverSetUp.setDriver();

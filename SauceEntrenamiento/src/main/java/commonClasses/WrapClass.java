@@ -15,4 +15,9 @@ public class WrapClass {
 		webelementUI.sendKeys(text);
 	}
 	
+	//Method to get text from web element
+	public static String getText (WebElement webelementUI) {
+		return webelementUI.getText();
+	}
+	
 }
